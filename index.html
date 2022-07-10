@@ -11,33 +11,8 @@
 </head>
 
 <body>
-    <div class="w-50">
+    <div class="container">
         <div class="card">
-            <div class="w-50 mt-5">
-                <div class="card">
-                    <div class="card-header text-center">
-                        <h4>Hello World</h4>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group">
-                                <label>Ai đang sử dụng?</label>
-                                <select class="form-control" id="selectUser">
-                                    <option>--Chọn để chào--</option>
-                                    <option value="B">Bố</option>
-                                    <option value="M">Mẹ</option>
-                                    <option value="A">Anh trai</option>
-                                    <option value="E">Em gái</option>
-                                </select>
-                            </div>
-                            <button type="button" class="btn btn-success" id="btnSort">Chào</button>
-                        </form>
-                    </div>
-                    <div class="card-footer">
-                        <p id="txtSortedNumberList"></p>
-                    </div>
-                </div>
-            </div>
             <div class="w-50 mt-5">
                 <div class="card">
                     <div class="card-header text-center">
@@ -65,8 +40,35 @@
                     </div>
                 </div>
             </div>
+            <div class="w-50 mt-5">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h4>Hello World</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Chọn thành viên</label>
+                                <select class="form-control" id="selectUser">
+                                    <option>--Chọn để chào--</option>
+                                    <option value="B">Bố</option>
+                                    <option value="M">Mẹ</option>
+                                    <option value="A">Anh trai</option>
+                                    <option value="E">Em gái</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-success" id="btnHello">Gửi lời chào</button>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <p id="txtSayHello"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"

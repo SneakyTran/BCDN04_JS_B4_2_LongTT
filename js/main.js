@@ -24,24 +24,27 @@
  * 3 số theo thứ tự tăng dần
  *
  */
- function sort() {
-    var num1 = document.getElementById("ipNum1").value;
-    var num2 = document.getElementById("ipNum2").value;
-    var num3 = document.getElementById("ipNum3").value;
+function sort() {
+    var num1 = Number(document.getElementById("ipNum1").value);
+    var num2 = Number(document.getElementById("ipNum2").value);
+    var num3 = Number(document.getElementById("ipNum3").value);
     var temp = 0;
     if (num1 > num2) {
+        console.log("1");
         temp = num1;
         num1 = num2;
         num2 = temp;
     }
-    if (num2 > num3) {
-        temp = num2;
-        num2 = num3;
-        num3 = temp;
-    }
     if (num1 > num3) {
+        console.log("3");
         temp = num1;
         num1 = num3;
+        num3 = temp;
+    }
+    if (num2 > num3) {
+        console.log("2");
+        temp = num2;
+        num2 = num3;
         num3 = temp;
     }
     document.getElementById("txtSortedNumberList").innerHTML =
@@ -50,5 +53,42 @@
 document.getElementById("btnSort").onclick = sort;
 
 //todo Viết chương trình “Chào hỏi” các thành viên trong gia đình với các đặc điểm. Đầu tiên máy sẽ hỏi ai sử dụng máy. Sau đó dựa vào câu trả lời và đưa ra lời chào phù hợp. Giả sử trong gia đình có 4 thành viên: Bố (B), Mẹ (M), anh Trai (A) và Em gái (E)
+/**
+ * Khối 1: input
+ * familyMember
+ *
+ * Khối 2: progress
+ * B1: Khai báo và lấy giá trị của biến từ form
+ * B2: In lời chào ra màn hình
+ *
+ * Khối 3: output
+ * Hello + familyMember
+ *
+ */
 
+function getFamilyMember(familyCode) {
+    switch (familyCode) {
+        case "B":
+            return "Bố";
 
+        case "M":
+            return "Mẹ";
+
+        case "A":
+            return "Anh trai";
+
+        case "E":
+            return "Em gái";
+
+        default:
+            alert("Không phải là thành viên!!!");
+    }
+}
+
+function sayHello() {
+    var familyMember = document.getElementById("selectUser").value;
+    document.getElementById("txtSayHello").innerHTML =
+        "Xin chào " + getFamilyMember(familyMember);
+}
+
+document.getElementById("btnHello").onclick = sayHello;
