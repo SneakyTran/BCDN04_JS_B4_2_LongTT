@@ -30,19 +30,16 @@ function sort() {
     var num3 = Number(document.getElementById("ipNum3").value);
     var temp = 0;
     if (num1 > num2) {
-        console.log("1");
         temp = num1;
         num1 = num2;
         num2 = temp;
     }
     if (num1 > num3) {
-        console.log("3");
         temp = num1;
         num1 = num3;
         num3 = temp;
     }
     if (num2 > num3) {
-        console.log("2");
         temp = num2;
         num2 = num3;
         num3 = temp;
@@ -92,3 +89,31 @@ function sayHello() {
 }
 
 document.getElementById("btnHello").onclick = sayHello;
+
+//todo Cho 3 số nguyên. Viết chương trình xuất ra có bao nhiêu số lẻ và bao nhiêu số chẵn.
+/**
+ * Khối 1: input
+ * num1, num2, num3
+ *
+ * Khối 2: progress
+ * B1: Khai báo biến và lấy giá trị 3 số nguyên từ form
+ * B2:
+ * Hàm trả về số chẵn lẻ
+ *      Nếu (num%2 == 0) => trả về số chẵn
+ *      Ngược lại trả về số lẻ
+ *
+ * Khối 3: output
+ * odd, even
+ *
+ */
+
+function isOddNumber(number) {
+    return number % 2 == 0 ? 1 : 0;
+}
+
+function countOddAndEven() {
+    var num1 = document.getElementById("ipNumber1").value;
+    var num2 = document.getElementById("ipNumber1").value;
+    var num3 = document.getElementById("ipNumber1").value;
+}
+document.getElementById("btnCount").onclick = countOddAndEven;
